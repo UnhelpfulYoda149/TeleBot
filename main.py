@@ -1,4 +1,5 @@
 #packages from python-telegram-bot
+import os
 from telegram import Update
 from telegram.ext import filters, ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler
 import logging
@@ -8,7 +9,7 @@ from wordle import *
 games = {}
 leaderboard = {}
 
-TOKEN = "7668496772:AAHmSQv1O8cHgw2ZtXospyq1vrMSfuZTXSE"
+TOKEN = os.environ.get(TOKEN)
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
